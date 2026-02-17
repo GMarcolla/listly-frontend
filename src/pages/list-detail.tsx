@@ -330,18 +330,25 @@ export default function ListDetailPage() {
                     <span className="font-bold text-gray-800 text-lg tracking-tight">Listly</span>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                     <Button
                         variant="outline"
                         size="sm"
                         className="gap-2 text-gray-600 border-gray-200 hover:bg-gray-50"
                         onClick={openSidebar}
                     >
-                        <Settings className="w-4 h-4" /> Configurações
+                        <Settings className="w-4 h-4" />
+                        <span className="hidden sm:inline">Configurações</span>
                     </Button>
-                    <Button variant="outline" size="sm" className="hidden md:flex gap-2 text-orange-600 border-orange-200 hover:bg-orange-50" asChild>
+                    <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="gap-2 text-orange-600 border-orange-200 hover:bg-orange-50" 
+                        asChild
+                    >
                         <Link to={`/public/${list.slug}`} target="_blank">
-                            <Share2 className="w-4 h-4" /> Compartilhar Lista
+                            <Share2 className="w-4 h-4" />
+                            <span className="hidden sm:inline">Compartilhar</span>
                         </Link>
                     </Button>
                 </div>

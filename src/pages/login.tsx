@@ -16,7 +16,7 @@ export default function LoginPage() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const { data } = await api.post('/login', { email, password });
+            const { data } = await api.post('/auth/login', { email, password });
             signIn(data.token, { id: data.id, name: data.name, email: data.email });
             navigate('/dashboard');
         } catch (err: any) {
